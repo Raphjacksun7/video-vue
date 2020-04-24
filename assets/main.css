@@ -51,6 +51,15 @@
     padding: 0;
 }
 
+.ui.fluid.card {
+    border: 2px solid #3499ffad;
+}
+
+.ui.card>.image, .ui.cards>.card>.image {
+    border-radius: 0;
+    border-bottom: 2px solid #75b9ff;
+}
+
 .vframe {
     position: relative;
     margin-left: auto;
