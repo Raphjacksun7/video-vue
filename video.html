@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="assets/semantic/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="assets/semantic/dist/components.css">
     <link rel="stylesheet" href="assets/js/video/css/video.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 
     <title>NeverGivApp</title>
@@ -24,16 +24,36 @@
         <div class="ten wide column">
             <div class="ui container">
                 <div class="ui fluid icon input">
-                    <input type="text" placeholder="Rechercher...">
-                    <i class="circular search link icon"></i>
+                    <input id="search-video" type="text" placeholder="Rechercher...">
+                    <i class="far fa-search icon-search"></i>
                 </div>
             </div>
             <div class="mt-5">
                 <div class="row">
 
 
-                  <div class="container">
+                  <div class="container marger-static-3">
                     <div class="video-container" id="video-container">
+                      <div class="video-content hidden" id="video-content">
+                        <div class="floating">
+                          <div class="alignleft">
+                              <img class="ui avatar image dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false" src="assets/img/matt.jpg">
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                              </div>
+                              <span>Titre de la vidéo</span>
+                          </div>
+                          <div class="alignright">
+                              <span>
+                                <i class="fad fa-share-square"></i>
+                              </span>
+                          </div>  
+                        </div>
+                      </div>
                       <div class="playback-animation" id="playback-animation">
                         <svg class="playback-icons">
                           <use class="hidden" href="#play-icon"></use>
@@ -41,8 +61,8 @@
                         </svg>
                       </div>
                 
-                      <video controls class="video" id="video" preload="metadata" poster="../../../Bureau/1_HdF1NiaTQUXwN4V1zp57Ag.jpeg">
-                        <source src="../../../Downloads/Video/(186) 2 HOURS of The Best Traditional Chinese Music - Relaxing Music - Meditation Music Zen - YouTube.mkv" type="video/mp4"></source>
+                      <video  controls class="video" id="video" preload="metadata" poster="https://cdn.pixabay.com/photo/2020/04/22/10/33/oak-5077303_960_720.jpg">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4"></source>
                       </video>
                 
                       <div class="video-controls hidden" id="video-controls">
@@ -98,6 +118,25 @@
                       </div>
                     </div>
                   </div>
+                  <div class="ui grid positioned container">
+                    <div class="four wide column">
+                      <span>200 vue</span>
+                    </div>
+                    <div class="four wide column">
+                      Il y'a 3h
+                    </div>
+                    <div class="four wide column">
+                      <span>
+                        100
+                        <i class="fas fa-heart"></i>
+                      </span> 
+                    </div>
+                    <div class="four wide column right">
+                      <button class="ui blue right floated button">
+                        Sauvegader
+                      </button>
+                    </div>
+                  </div>
                 
                   <svg style="display: none">
                     <defs>
@@ -141,8 +180,6 @@
                     </defs>
                   </svg>
                 
-
-                    <div class="marger-static"></div>
 
                     <h3 class="ui header">Plus de vidéo</h3>
                     <div class="ui three stackable cards mt-4">
@@ -286,6 +323,7 @@
 
 <script src="assets/js/jquery-3.1.1.min.js" ></script>
 <script src="assets/semantic/dist/semantic.min.js"></script>
+<script src="assets/main.js"></script>
 <script src="assets/js/video/js/video.js"></script>
 <script>
 $('.menu .item')
@@ -306,15 +344,13 @@ $('.menu .item')
     context : 'parent',
     auto    : true,
     path    : '/'
-  })
-;
-</script>
-<script>
-    $('.alignright.dropdown')
+  });
+
+  $('.profile.dropdown')
   .dropdown({
     transition: 'drop'
-  })
-;
+  });
+
 </script>
 </body>
 </html>

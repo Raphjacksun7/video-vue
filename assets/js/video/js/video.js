@@ -2,6 +2,7 @@
 // Select elements here
 const video = document.getElementById('video');
 const videoControls = document.getElementById('video-controls');
+const videoContent = document.getElementById('video-content');
 const playButton = document.getElementById('play');
 const playbackIcons = document.querySelectorAll('.playback-icons use');
 const timeElapsed = document.getElementById('time-elapsed');
@@ -25,6 +26,20 @@ const videoWorks = !!document.createElement('video').canPlayType;
 if (videoWorks) {
   video.controls = false;
   videoControls.classList.remove('hidden');
+  videoContent.classList.remove('hidden');
+}
+
+// Changing background
+
+function changeBackground () {
+  alert("Hello");
+  videoContainer.style.property = "blue";
+}
+
+// Setting context menu to false
+
+function contextMenu() {
+  return false
 }
 
 // Add functions here
@@ -32,6 +47,8 @@ if (videoWorks) {
 // togglePlay toggles the playback state of the video.
 // If the video playback is paused or ended, the video is played
 // otherwise, the video is paused
+
+
 function togglePlay() {
   if (video.paused || video.ended) {
     video.play();
@@ -220,11 +237,13 @@ function hideControls() {
   }
 
   videoControls.classList.add('hide');
+  videoContent.classList.add('hide');
 }
 
 // showControls displays the video controls
 function showControls() {
   videoControls.classList.remove('hide');
+  videoContent.classList.remove('hide');
 }
 
 // keyboardShortcuts executes the relevant functions for
@@ -267,13 +286,19 @@ video.addEventListener('click', togglePlay);
 video.addEventListener('click', animatePlayback);
 video.addEventListener('mouseenter', showControls);
 video.addEventListener('mouseleave', hideControls);
+video.addEventListener('oncontextmenu', contextMenu);
 videoControls.addEventListener('mouseenter', showControls);
 videoControls.addEventListener('mouseleave', hideControls);
+videoContent.addEventListener('mouseenter', showControls);
+videoContent.addEventListener('mouseleave', hideControls);
+videoContent.addEventListener('oncontextmenu', contextMenu);
 seek.addEventListener('mousemove', updateSeekTooltip);
 seek.addEventListener('input', skipAhead);
 volume.addEventListener('input', updateVolume);
 volumeButton.addEventListener('click', toggleMute);
 fullscreenButton.addEventListener('click', toggleFullScreen);
+videoContainer.addEventListener('mouseon', changeBackground);
+videoContainer.addEventListener('oncontextmenu', contextMenu);
 videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
 pipButton.addEventListener('click', togglePip);
 

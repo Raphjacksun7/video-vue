@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/mdb.min.css">
     <link rel="stylesheet" type="text/css" href="assets/nvgstyles.css">
     <link rel="stylesheet" type="text/css" href="assets/semantic/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/semantic/dist/components.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 
     <title>NeverGivApp</title>
@@ -23,62 +23,30 @@
             <div class="ui container">
                 <div class="ui fluid icon input">
                     <input id="search-video" type="text" placeholder="Rechercher...">
-                    <i class="circular search link icon"></i>
+                    <i class="far fa-search icon-search"></i>
                 </div>
             </div>
             <div class="mt-5" id="nvg-home">
                 <div class="ui pointing secondary menu">
-                    <a class="item active" data-tab="home">Accueil</a>
-                    <a class="item" data-tab="my-videos">Mes videos</a>
-                    <a class="item" data-tab="playlist">Playlist</a>
+                    <a class="item active" data-tab="home">
+                      <i class="fas fa-home-lg-alt icon-tab"></i>
+                      Accueil
+                    </a>
+                    <a class="item" data-tab="my-videos">
+                      <i class="far fa-play-circle icon-tab"></i>
+                      Mes videos
+                    </a>
+                    <a class="item" data-tab="playlist">
+                      <i class="fas fa-video icon-tab"></i>
+                      Playlist
+                    </a>
                 </div>
                 <div class="row">
                     <div class="ui tab col-12 active" data-tab="home">
-                        <h3 class="ui header">Récemment regardée</h3>
-                        <div class="ui three stackable cards mt-4">
-                            <div class="card">
-                              <div class="content">
-                                <a class="vframe" href="video.html">
-                                    <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                </a>
-                                <div class="info-time">
-                                    <div class="time">
-                                        <p>3:04</p>
-                                    </div>
-                                    <div class="clck">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="extra content">
-                                <a class="header">Titre de la video</a>
-                                <div class="floating">
-                                    <div class="alignleft">
-                                        <img class="ui avatar image" src="assets/img/matt.jpg">
-                                        <span>Matt</span>
-                                        <div class="row-sapn">
-                                            <span>200 vues &#8226;</span>
-                                            <span>Il y a 3h</span>
-                                        </div>
-                                    </div>
-                                    <div class="alignright ui dropdown">
-                                        <span>4</span>
-                                        <div class="menu">
-                                            <div class="item">
-                                              <i class="attention icon"></i>
-                                              Obtenir le lien direct
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="item">
-                                              <i class="comment icon"></i>
-                                              Reporter comme indésirable
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
+                        <div class="tab-content">
+                          <h4 class="ui header">Récemment regardée</h4>
+                          <div class="ui three stackable cards mt-4">
+                              <div class="card">
                                 <div class="content">
                                   <a class="vframe" href="video.html">
                                       <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
@@ -93,7 +61,7 @@
                                   </div>
                                 </div>
                                 <div class="extra content">
-                                  <a class="header">Titre de la video</a>
+                                  <a class="video-title-small">Titre de la video</a>
                                   <div class="floating">
                                       <div class="alignleft">
                                           <img class="ui avatar image" src="assets/img/matt.jpg">
@@ -104,7 +72,9 @@
                                           </div>
                                       </div>
                                       <div class="alignright ui dropdown">
-                                          <span>4</span>
+                                          <span>
+                                            <i class="fas fa-ellipsis-v"></i>
+                                          </span>
                                           <div class="menu">
                                               <div class="item">
                                                 <i class="attention icon"></i>
@@ -119,220 +89,320 @@
                                       </div>  
                                   </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
-                                      </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
+                              </div>
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
-                                      <div class="alignleft">
-                                          <img class="ui avatar image" src="assets/img/matt.jpg">
-                                          <span>Matt</span>
-                                          <div class="row-sapn">
-                                              <span>200 vues &#8226;</span>
-                                              <span>Il y a 3h</span>
-                                          </div>
-                                      </div>
-                                      <div class="alignright ui dropdown">
-                                          <span>4</span>
-                                          <div class="menu">
-                                              <div class="item">
-                                                <i class="attention icon"></i>
-                                                Obtenir le lien direct
-                                              </div>
-                                              <div class="divider"></div>
-                                              <div class="item">
-                                                <i class="comment icon"></i>
-                                                Reporter comme indésirable
-                                              </div>
-                                          </div>
-                                      </div>  
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                        <div class="alignleft">
+                                            <img class="ui avatar image" src="assets/img/matt.jpg">
+                                            <span>Matt</span>
+                                            <div class="row-sapn">
+                                                <span>200 vues &#8226;</span>
+                                                <span>Il y a 3h</span>
+                                            </div>
+                                        </div>
+                                        <div class="alignright ui dropdown">
+                                            <span>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="menu">
+                                                <div class="item">
+                                                  <i class="attention icon"></i>
+                                                  Obtenir le lien direct
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="item">
+                                                  <i class="comment icon"></i>
+                                                  Reporter comme indésirable
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
                                   </div>
-                                </div>
-                            </div>
+                              </div>
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                        <div class="alignleft">
+                                            <img class="ui avatar image" src="assets/img/matt.jpg">
+                                            <span>Matt</span>
+                                            <div class="row-sapn">
+                                                <span>200 vues &#8226;</span>
+                                                <span>Il y a 3h</span>
+                                            </div>
+                                        </div>
+                                        <div class="alignright ui dropdown">
+                                            <span>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="menu">
+                                                <div class="item">
+                                                  <i class="attention icon"></i>
+                                                  Obtenir le lien direct
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="item">
+                                                  <i class="comment icon"></i>
+                                                  Reporter comme indésirable
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
+                  
                         <div class="marger-static"></div>
-                        <h3 class="ui header">Recommandations</h3>
-                        <div class="ui three stackable cards mt-4">
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
-                                      </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
+
+                        <div class="tab-content">                        
+                          <h4 class="ui header">Recommandations</h4>
+                          <div class="ui three stackable cards mt-4">
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
-                                      <div class="alignleft">
-                                          <img class="ui avatar image" src="assets/img/matt.jpg">
-                                          <span>Matt</span>
-                                          <div class="row-sapn">
-                                              <span>200 vues &#8226;</span>
-                                              <span>Il y a 3h</span>
-                                          </div>
-                                      </div>
-                                      <div class="alignright ui dropdown">
-                                          <span>4</span>
-                                          <div class="menu">
-                                              <div class="item">
-                                                <i class="attention icon"></i>
-                                                Obtenir le lien direct
-                                              </div>
-                                              <div class="divider"></div>
-                                              <div class="item">
-                                                <i class="comment icon"></i>
-                                                Reporter comme indésirable
-                                              </div>
-                                          </div>
-                                      </div>  
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                        <div class="alignleft">
+                                            <img class="ui avatar image" src="assets/img/matt.jpg">
+                                            <span>Matt</span>
+                                            <div class="row-sapn">
+                                                <span>200 vues &#8226;</span>
+                                                <span>Il y a 3h</span>
+                                            </div>
+                                        </div>
+                                        <div class="alignright ui dropdown">
+                                            <span>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="menu">
+                                                <div class="item">
+                                                  <i class="attention icon"></i>
+                                                  Obtenir le lien direct
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="item">
+                                                  <i class="comment icon"></i>
+                                                  Reporter comme indésirable
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
                                   </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
-                                      </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
+                              </div>
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
-                                      <div class="alignleft">
-                                          <img class="ui avatar image" src="assets/img/matt.jpg">
-                                          <span>Matt</span>
-                                          <div class="row-sapn">
-                                              <span>200 vues &#8226;</span>
-                                              <span>Il y a 3h</span>
-                                          </div>
-                                      </div>
-                                      <div class="alignright ui dropdown">
-                                          <span>4</span>
-                                          <div class="menu">
-                                              <div class="item">
-                                                <i class="attention icon"></i>
-                                                Obtenir le lien direct
-                                              </div>
-                                              <div class="divider"></div>
-                                              <div class="item">
-                                                <i class="comment icon"></i>
-                                                Reporter comme indésirable
-                                              </div>
-                                          </div>
-                                      </div>  
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                        <div class="alignleft">
+                                            <img class="ui avatar image" src="assets/img/matt.jpg">
+                                            <span>Matt</span>
+                                            <div class="row-sapn">
+                                                <span>200 vues &#8226;</span>
+                                                <span>Il y a 3h</span>
+                                            </div>
+                                        </div>
+                                        <div class="alignright ui dropdown">
+                                            <span>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="menu">
+                                                <div class="item">
+                                                  <i class="attention icon"></i>
+                                                  Obtenir le lien direct
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="item">
+                                                  <i class="comment icon"></i>
+                                                  Reporter comme indésirable
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
                                   </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
-                                      </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
+                              </div>
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
-                                      <div class="alignleft">
-                                          <img class="ui avatar image" src="assets/img/matt.jpg">
-                                          <span>Matt</span>
-                                          <div class="row-sapn">
-                                              <span>200 vues &#8226;</span>
-                                              <span>Il y a 3h</span>
-                                          </div>
-                                      </div>
-                                      <div class="alignright ui dropdown">
-                                          <span>4</span>
-                                          <div class="menu">
-                                              <div class="item">
-                                                <i class="attention icon"></i>
-                                                Obtenir le lien direct
-                                              </div>
-                                              <div class="divider"></div>
-                                              <div class="item">
-                                                <i class="comment icon"></i>
-                                                Reporter comme indésirable
-                                              </div>
-                                          </div>
-                                      </div>  
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                        <div class="alignleft">
+                                            <img class="ui avatar image" src="assets/img/matt.jpg">
+                                            <span>Matt</span>
+                                            <div class="row-sapn">
+                                                <span>200 vues &#8226;</span>
+                                                <span>Il y a 3h</span>
+                                            </div>
+                                        </div>
+                                        <div class="alignright ui dropdown">
+                                            <span>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="menu">
+                                                <div class="item">
+                                                  <i class="attention icon"></i>
+                                                  Obtenir le lien direct
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="item">
+                                                  <i class="comment icon"></i>
+                                                  Reporter comme indésirable
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
                                   </div>
-                                </div>
-                            </div>
+                              </div>
+                          </div>
                         </div>
+
                         <div class="marger-static"></div>
                     </div>
                     <div class="ui tab col-12" data-tab="my-videos">
-                        <div class="ui section divider"></div>
                         <div class="ui middle aligned center aligned container">
                             <input type="file" (change)="fileEvent($event)" class="inputfile" id="upload-video" />
                             <label for="upload-video" class="upload-btn">
                             <i class="fa fa-upload"></i> 
                                 Uploader une nouvelle vidéo
                             </label>          
+                        </div>
+                        <div class="ui modal">
+                          <div class="header">Header</div>
+                          <div class="content">
+                            <p></p>
+                            <p></p>
+                            <p></p>
                           </div>
-                          <div class="ui modal">
-                            <div class="header">Header</div>
-                            <div class="content">
-                              <p></p>
-                              <p></p>
-                              <p></p>
-                            </div>
-                          </div>
-                        <div class="ui section divider"></div>
+                        </div>  
                         <div class="marger-static"></div>
-                        <h3 class="ui header">Vidéos mises en ligne</h3>
-                        <div class="ui three stackable cards mt-4">
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
-                                      </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
+
+                        <div class="tab-content">
+                          <h4 class="ui header">Vidéos mises en ligne</h4>
+                          <div class="ui three stackable cards mt-4">
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                        <div class="alignleft">
+                                            <div class="row-sapn">
+                                                <span>200 vues &#8226;</span>
+                                                <span>Il y a 3h</span>
+                                            </div>
+                                        </div>
+                                        <div class="alignright ui dropdown">
+                                            <span>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="menu">
+                                                <div class="item">
+                                                  <i class="attention icon"></i>
+                                                  Obtenir le lien direct
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="item">
+                                                  <i class="comment icon"></i>
+                                                  Supprimer cette vidéo
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
                                       <div class="alignleft">
                                           <div class="row-sapn">
                                               <span>200 vues &#8226;</span>
@@ -340,7 +410,9 @@
                                           </div>
                                       </div>
                                       <div class="alignright ui dropdown">
-                                          <span>4</span>
+                                          <span>
+                                            <i class="fas fa-ellipsis-v"></i>
+                                          </span>
                                           <div class="menu">
                                               <div class="item">
                                                 <i class="attention icon"></i>
@@ -353,125 +425,72 @@
                                               </div>
                                           </div>
                                       </div>  
+                                    </div>
                                   </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
-                                      </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
-                                  </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
-                                    <div class="alignleft">
-                                        <div class="row-sapn">
-                                            <span>200 vues &#8226;</span>
-                                            <span>Il y a 3h</span>
+                              </div>
+                              <div class="card">
+                                  <div class="content">
+                                    <a class="vframe" href="video.html">
+                                        <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
+                                    </a>
+                                    <div class="info-time">
+                                        <div class="time">
+                                            <p>3:04</p>
+                                        </div>
+                                        <div class="clck">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                                         </div>
                                     </div>
-                                    <div class="alignright ui dropdown">
-                                        <span>4</span>
-                                        <div class="menu">
-                                            <div class="item">
-                                              <i class="attention icon"></i>
-                                              Obtenir le lien direct
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="item">
-                                              <i class="comment icon"></i>
-                                              Supprimer cette vidéo
-                                            </div>
-                                        </div>
-                                    </div>  
                                   </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                  <a class="vframe" href="video.html">
-                                      <img class="ui wireframe image" src="assets/img/jenny.jpg" alt="">
-                                  </a>
-                                  <div class="info-time">
-                                      <div class="time">
-                                          <p>3:04</p>
+                                  <div class="extra content">
+                                    <a class="video-title-small">Titre de la video</a>
+                                    <div class="floating">
+                                      <div class="alignleft">
+                                          <div class="row-sapn">
+                                              <span>200 vues &#8226;</span>
+                                              <span>Il y a 3h</span>
+                                          </div>
                                       </div>
-                                      <div class="clck">
-                                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                                      </div>
-                                  </div>
-                                </div>
-                                <div class="extra content">
-                                  <a class="header">Titre de la video</a>
-                                  <div class="floating">
-                                    <div class="alignleft">
-                                        <div class="row-sapn">
-                                            <span>200 vues &#8226;</span>
-                                            <span>Il y a 3h</span>
-                                        </div>
+                                      <div class="alignright ui dropdown">
+                                          <span>
+                                            <i class="fas fa-ellipsis-v"></i>
+                                          </span>
+                                          <div class="menu">
+                                              <div class="item">
+                                                <i class="attention icon"></i>
+                                                Obtenir le lien direct
+                                              </div>
+                                              <div class="divider"></div>
+                                              <div class="item">
+                                                <i class="comment icon"></i>
+                                                Supprimer cette vidéo
+                                              </div>
+                                          </div>
+                                      </div>  
                                     </div>
-                                    <div class="alignright ui dropdown">
-                                        <span>4</span>
-                                        <div class="menu">
-                                            <div class="item">
-                                              <i class="attention icon"></i>
-                                              Obtenir le lien direct
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="item">
-                                              <i class="comment icon"></i>
-                                              Supprimer cette vidéo
-                                            </div>
-                                        </div>
-                                    </div>  
                                   </div>
-                                </div>
-                            </div>
+                              </div>
+                          </div>
                         </div>
                         <div class="marger-static"></div>
                     </div>
-                    <div class="ui tab col-12" data-tab="playlist">
-                        <div class="marger-static"></div>
-                        <div class="ui three column grid">
-                            <div class="column">
-                              <div class="ui fluid card">
-                                <div class="image">
-                                  <img src="assets/img/playlist.png">
-                                </div>
+                    <div class="ui tab col-12 marger-static" data-tab="playlist">
+                        <div class="ui divided equal width row">
+                          <div class="column">
+                            <div class="ui items">
+                              <div class="item">
+                                <a class="ui small image">
+                                  <img src="assets/img/image.png">
+                                </a>
                                 <div class="content">
-                                  <a class="text">Nom de la playlist</a>
+                                  <a class="header">Nom de la playlist</a>
+                                  <div class="description">
+                                    <p>25 vidéos</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="column">
-                              <div class="ui fluid card">
-                                <div class="image">
-                                  <img src="assets/img/playlist.png">
-                                </div>
-                                <div class="content">
-                                  <a class="text">Nom de la playlist</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="column">
-                                <div class="ui fluid card">
-                                  <div class="image">
-                                    <img src="assets/img/playlist.png">
-                                  </div>
-                                  <div class="content">
-                                    <a class="text">Nom de la playlist</a>
-                                  </div>
-                                </div>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -483,16 +502,15 @@
                           <img src="assets/img/image.png">
                         </div>
                         <div class="content">
-                          <a class="header">Content Header</a>
-                          <div class="meta">
-                            <a>Date</a>
-                            <a>Category</a>
-                          </div>
+                          <a class="header">Titre de la vidéo</a>
                           <div class="description">
                             A description which may flow for several lines and give context to the content.
                           </div>
+                          <div class="meta">
+                            <a>Il y'a 4 jours &#8226; 600K vues</a>
+                          </div>
                           <div class="extra">
-                            <img src="assets/img/image.png" class="ui circular avatar image"> Username
+                            <img src="assets/img/image.png" class="ui circular avatar image"> Nom de l'auteur
                           </div>
                         </div>
                     </div>
@@ -501,16 +519,15 @@
                           <img src="assets/img/image.png">
                         </div>
                         <div class="content">
-                          <a class="header">Content Header</a>
-                          <div class="meta">
-                            <a>Date</a>
-                            <a>Category</a>
-                          </div>
+                          <a class="header">Titre de la vidéo</a>
                           <div class="description">
                             A description which may flow for several lines and give context to the content.
                           </div>
+                          <div class="meta">
+                            <a>Il y'a 4 jours &#8226; 600K vues</a>
+                          </div>
                           <div class="extra">
-                            <img src="assets/img/image.png" class="ui circular avatar image"> Username
+                            <img src="assets/img/image.png" class="ui circular avatar image"> Nom de l'auteur
                           </div>
                         </div>
                     </div>
@@ -519,16 +536,15 @@
                           <img src="assets/img/image.png">
                         </div>
                         <div class="content">
-                          <a class="header">Content Header</a>
-                          <div class="meta">
-                            <a>Date</a>
-                            <a>Category</a>
-                          </div>
+                          <a class="header">Titre de la vidéo</a>
                           <div class="description">
                             A description which may flow for several lines and give context to the content.
                           </div>
+                          <div class="meta">
+                            <a>Il y'a 4 jours &#8226; 600K vues</a>
+                          </div>
                           <div class="extra">
-                            <img src="assets/img/image.png" class="ui circular avatar image"> Username
+                            <img src="assets/img/image.png" class="ui circular avatar image"> Nom de l'auteur
                           </div>
                         </div>
                     </div>
